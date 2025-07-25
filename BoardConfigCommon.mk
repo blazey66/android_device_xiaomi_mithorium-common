@@ -62,7 +62,7 @@ TARGET_KERNEL_CONFIG := \
     vendor/feature/android-12.config \
     vendor/feature/erofs.config \
     vendor/feature/exfat.config \
-    vendor/feature/kprobes.config \
+    vendor/feature/ksu.config \
     vendor/feature/lmkd.config
 
 TARGET_KERNEL_RECOVERY_CONFIG := \
