@@ -54,27 +54,14 @@ ifeq ($(TARGET_USES_MITHORIUM_KERNEL),true)
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mithorium-$(TARGET_KERNEL_VERSION)/kernel
 
 TARGET_KERNEL_CONFIG := \
-    vendor/$(TARGET_BOARD_PLATFORM)-perf_defconfig \
-    vendor/common.config \
-    vendor/feature/android-12.config \
-    vendor/feature/exfat.config \
-    vendor/feature/kprobes.config \
-    vendor/feature/lmkd.config
+    vendor/$(TARGET_BOARD_PLATFORM)-perf_defconfig
 
 TARGET_KERNEL_RECOVERY_CONFIG := \
-    vendor/$(TARGET_BOARD_PLATFORM)-perf_defconfig \
-    vendor/common.config \
-    vendor/feature/exfat.config \
-    vendor/feature/ntfs.config \
-    vendor/feature/no-camera-stack.config \
-    vendor/feature/no-wlan-driver.config
+    vendor/$(TARGET_BOARD_PLATFORM)-perf-recovery_defconfig
 
 ifeq ($(TARGET_KERNEL_VERSION),4.9)
 TARGET_KERNEL_CONFIG += \
     vendor/feature/uclamp.config
-else ifeq ($(TARGET_KERNEL_VERSION),4.19)
-TARGET_KERNEL_CONFIG += \
-    vendor/feature/wireguard.config
 endif
 endif
 
